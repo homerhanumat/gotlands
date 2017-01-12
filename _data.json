@@ -1,0 +1,17 @@
+{
+  "index": {
+    "pageTitle": "Home"
+  },
+  "farm": {
+    "pageTitle": "The Farm"
+  },
+  "ponies": {
+    "pageTitle": "Swedish Gotlands"
+  },
+  "retreat": {
+    "pageTitle": "Carriage House B&B"
+  },
+  "contact": {
+    "pageTitle": "Contact"
+  }
+}
