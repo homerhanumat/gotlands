@@ -56,6 +56,9 @@ table {
 body {
     font-family: 'Sorts Mill Goudy', serif;
     background-color: rgb(255,204,0);  /* swedish flag, yellow */
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 
@@ -86,7 +89,7 @@ header p {
 ***********************************************************/
 
 
-.clear nav {
+.navWrapper nav {
     padding: 0;
 }
 
@@ -106,7 +109,7 @@ nav li.icon {
     display: none;
 }
 
-nav a, .dropbtn {
+nav a, .dropbtn, div .news-icon a {
     display: inline-block;
     font-size: .85em;
     color: white;
@@ -166,7 +169,10 @@ nav .dropdown ul {
 ** container when the user clicks on the dropdown button) */
 .show {display:block;}
 
-nav a:hover, .dropbtn:hover, .dropbtn:focus {
+nav a:hover,
+.dropbtn:hover,
+div .news-icon a:hover,
+.dropbtn:focus {
     background-color: rgb(150,150,150);
 }
 
@@ -193,6 +199,7 @@ aside p, aside li {
     font-size: .9em;
     margin-top: 10px;
 }
+
 .main h2 {
     font-size: 2em;
     margin-top: 20px;
@@ -232,15 +239,24 @@ aside p, aside li {
     border-radius: 15px;
 }
 
+div .news-icon {
+    display: none;
+}
+
 nav ul, header h1, .pageWrapper {
     max-width: 1400px;
     margin: 0 auto;
 }
 
-/* enable sticky footer: */
+.pageWrapper {
+    flex: 1;
+}
+
+/* enable sticky footer:
 .subpageWrapper {
     min-height: calc(100vh - 60px);
  }
+*/
 
 .main img {
     width: 90%;
@@ -272,16 +288,24 @@ footer {
     background-color: rgb(0,127,229);
     color: rgb(204,204,204);
     clear: both;
-    height: 55px;  /* adjusted to get sticky footer at bottom, no scrolling */
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
 }
+
+footer .element {
+    flex: 1;
+    -webkit-flex: 1;
+    min-width: 230px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+
+}
+
 footer a {
     color: white;
-}
-
-
-footer .footer-text {
-    display: inline-block;
-    padding: 20px 10px 20px 10px;
 }
 
 
@@ -291,7 +315,6 @@ footer .footer-text {
 
 ul.social-icons {
     list-style: none;
-    display: inline;
 }
 .social-icons li {
     vertical-align: middle;
@@ -352,6 +375,16 @@ ul.social-icons {
         top: 0;
         margin-left: 0;
     }
+
+    div .news-icon {
+        display: block;
+        float: right;
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-right: 0;
+    }
+
     div.responsive #navlist {
         text-align: left;
     }
@@ -371,7 +404,6 @@ ul.social-icons {
         left: 100px;
         top: 0;
         border-radius: 0;
-        /*min-width: 250px;*/
         padding: 6px;
     }
     div.responsive #navlist ul.dropdown-content li {
@@ -380,6 +412,20 @@ ul.social-icons {
     div.responsive #navlist ul.dropdown-content li a {
         /*display: inline;*/
         padding: 0 5px 0 5px;
+    }
+
+    .main {
+        width: 100%;
+    }
+    aside.sidebar {
+        display: none;
+        transition: 0.5s;
+    }
+
+    aside.sidebar.responsive {
+        display: block;
+        float: right;
+        width: 50%;
     }
 
     .main .article1,
@@ -394,4 +440,18 @@ ul.social-icons {
         clear: both;
     }
 
+}
+
+@media screen and (max-width: 435px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .main h2 {
+        font-size: 1.5em;
+    }
+
+    .main h3 {
+        font-size: 1.2 em;
+    }
 }

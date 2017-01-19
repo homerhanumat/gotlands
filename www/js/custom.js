@@ -110,19 +110,36 @@ window.addEventListener('load', function() {
     const navbar = document.querySelector('nav');
     const main = document.querySelector('.main');
     const sidebar = document.querySelector('.sidebar');
+    const newsIcon = document.querySelector('div .news-icon')
     icon.addEventListener('click', function() {
         if ( navbarWrapper.classList.contains('responsive') ) {
             navbarWrapper.classList.remove('responsive');
             navbarWrapper.classList.add('clear');
             navbarWrapper.style.float = "none";
             main.style.float = "left";
-            sidebar.style.display = "";
+            main.style.width = "100%";
         } else {
             navbarWrapper.classList.add('responsive');
             navbarWrapper.classList.remove('clear');
             navbarWrapper.style.float = "left";
             main.style.float = "right";
+            main.style.width = "80%";
+            sidebar.classList.remove('responsive');
             sidebar.style.display = "none";
         }
         });
+
+    newsIcon.addEventListener('click', function(){
+        if ( sidebar.classList.contains('responsive') ) {
+            sidebar.classList.remove('responsive');
+            sidebar.style.display = "none";
+            main.style.width = "100%";
+        } else {
+           sidebar.classList.add('responsive');
+           main.style.width = "50%";
+           main.style.float = "left";
+           navbarWrapper.classList.remove('responsive');
+           sidebar.style.display = "block";
+        }
+    });
 });
