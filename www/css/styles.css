@@ -419,7 +419,8 @@ ul.social-icons {
     }
     aside.sidebar {
         display: none;
-        transition: 0.5s;
+        width: 0;
+        transition: width 0.4s ease-out;
     }
 
     aside.sidebar.responsive {
@@ -452,6 +453,6 @@ ul.social-icons {
     }
 
     .main h3 {
-        font-size: 1.2 em;
+        font-size: 1.2em;
     }
 }
