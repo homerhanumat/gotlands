@@ -1,7 +1,10 @@
-/*
+/*  Note:  I started from "ending" CSS tutorial code of Chapter 13 of CSS:  The Missing Manual */
+
+
+/***************************************************************
 * code to reset browser styles
 * source: CSS:  The Missing Manual, 4th edition
-*/
+****************************************************************/
 
 * {
     box-sizing: border-box;
@@ -39,58 +42,10 @@ table {
     border-spacing: 0;
 }
 
-/* end reset browser styles */
 
-
-ul.social-icons {
-    list-style: none;
-    display: inline;
-}
-.social-icons li {
-    vertical-align: middle;
-    display: inline;
-}
-.social-icons a {
-    color: #fff;
-    text-decoration: none;
-}
-.fa-facebook {
-    padding:10px 14px;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition: .5s;
-    background-color: rgb(0,127,229);
-}
-.fa-facebook:hover {
-    background-color: #3d5b99;
-}
-.fa-twitter {
-    padding:10px 12px;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition: .5s;
-    background-color: rgb(0,127,229);
-}
-.fa-twitter:hover {
-    background-color: #00aced;
-}
-
-.fa-google-plus {
-    padding:10px 9px;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition: .5s;
-    background-color: rgb(0,127,229);
-}
-.fa-google-plus:hover {
-    background-color: #e25714;
-}
+/********************************************************
+* Body and header
+*********************************************************/
 
 .clear:after {
     content: " ";
@@ -101,6 +56,9 @@ ul.social-icons {
 body {
     font-family: 'Sorts Mill Goudy', serif;
     background-color: rgb(255,204,0);  /* swedish flag, yellow */
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 
@@ -111,7 +69,7 @@ header {
 }
 
 header h1 {
-    font-size: 3em;
+    font-size: 3.5em;
     color: white;
     font-weight: bold;
     padding-top: 30px;
@@ -125,13 +83,19 @@ header p {
     margin-bottom: 15px;
 }
 
-nav .clear {
+
+/*********************************************************
+* Navigation
+***********************************************************/
+
+
+.navWrapper nav {
     padding: 0;
 }
 
 ul#navlist {
-    text-align: center;
-    padding: 10px 0 10px 0;
+    text-align: center;         /* key to centering the navlist! */
+    padding: 10px 0 10px 0;     /* source:  http://csswizardry.com/2011/01/create-a-centred-horizontal-navigation/ */
 }
 
 nav li {
@@ -140,7 +104,12 @@ nav li {
     margin: 0 5px 0 5px;
     list-style: none;
 }
-nav a, .dropbtn {
+
+nav li.icon {
+    display: none;
+}
+
+nav a, .dropbtn, div .news-icon a {
     display: inline-block;
     font-size: .85em;
     color: white;
@@ -159,6 +128,10 @@ nav .dropdown ul {
     text-align: left;
 }
 
+.dropdown ul li {
+    margin: 0;
+}
+
 .dropdown ul li a {
     font-size: .75em;
     color: black;
@@ -169,7 +142,9 @@ nav .dropdown ul {
     transition: all .5s;
 }
 
-/* The container <div> - needed to position the dropdown content */
+/* Dropdown menu modifed from:  http://www.w3schools.com/howto/howto_js_dropdown.asp */
+
+/* The container <div>:  needed to position the dropdown content */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -181,22 +156,36 @@ nav .dropdown ul {
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
+    margin-top: 0;
     display: none;
     position: absolute;
     background-color: rgb(255,255,224);
     border: black solid 2px;
-    width: 100%;
+    border-radius: 15px;
+    width: 150px;
 }
 
-/*
-* Show the dropdown menu (use JS to add this class to the .dropdown-content
-* container when the user clicks on the dropdown button)
-*/
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content
+** container when the user clicks on the dropdown button) */
 .show {display:block;}
 
-nav a:hover, .dropbtn:hover, .dropbtn:focus, .dropdown ul li a:hover {
+nav a:hover,
+.dropbtn:hover,
+div .news-icon a:hover,
+.dropbtn:focus {
     background-color: rgb(150,150,150);
 }
+
+.dropdown ul li a:hover {
+    color: #00aced;
+    font-size: 0.8em;
+}
+
+
+/********************************************************
+* Primary Page Content:  Articles, Sidebar
+*********************************************************/
+
 
 aside h2 {
     font-size: 1.5em;
@@ -210,6 +199,7 @@ aside p, aside li {
     font-size: .9em;
     margin-top: 10px;
 }
+
 .main h2 {
     font-size: 2em;
     margin-top: 20px;
@@ -221,24 +211,6 @@ aside p, aside li {
 }
 .main p {
     margin-bottom: 15px;
-}
-
-
-footer {
-    font-size: .9em;
-    background-color: rgb(0,127,229);
-    color: rgb(204,204,204);
-    clear: both;
-    height: 55px;
-}
-footer a {
-    color: white;
-}
-
-
-footer .footer-text {
-    display: inline-block;
-    padding: 20px 10px 20px 10px;
 }
 
 .main {
@@ -267,15 +239,24 @@ footer .footer-text {
     border-radius: 15px;
 }
 
+div .news-icon {
+    display: none;
+}
+
 nav ul, header h1, .pageWrapper {
     max-width: 1400px;
     margin: 0 auto;
 }
 
-/* enable sticky footer: */
+.pageWrapper {
+    flex: 1;
+}
+
+/* enable sticky footer:
 .subpageWrapper {
     min-height: calc(100vh - 60px);
  }
+*/
 
 .main img {
     width: 90%;
@@ -294,4 +275,182 @@ nav ul, header h1, .pageWrapper {
     float: right;
     width: 45%;
     margin-right: 0;
+}
+
+
+
+/*******************************************************
+* Footer
+********************************************************/
+
+footer {
+    font-size: .9em;
+    background-color: rgb(0,127,229);
+    color: rgb(204,204,204);
+    clear: both;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+}
+
+footer .element {
+    flex: 1;
+    -webkit-flex: 1;
+    min-width: 230px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+
+}
+
+footer a {
+    color: white;
+}
+
+
+/***************************************************
+* Social media icons
+****************************************************/
+
+ul.social-icons {
+    list-style: none;
+}
+.social-icons li {
+    vertical-align: middle;
+    display: inline;
+}
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.fa-facebook,
+.fa-twitter,
+.fa-google-plus,
+.fa-instagram {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: rgb(0,127,229);
+}
+
+.fa-facebook:hover {
+    background-color: #3d5b99;
+}
+.fa-twitter:hover {
+    background-color: #00aced;
+}
+.fa-google-plus:hover {
+    background-color: #e25714;
+}
+
+.fa-instagram:hover {
+    background-color: #bc2a8d;
+}
+
+/***************************
+* Responsivity
+****************************/
+
+@media screen and (max-width: 800px) {
+    #navlist li:not(:first-child) {
+        display: none;
+    }
+    div.responsive #navlist {
+        padding: 0;
+    }
+    #navlist .dropdown {
+        display: block;
+        position: relative;
+    }
+    #navlist li.icon {
+        display: block;
+        float: left;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-left: 0;
+    }
+
+    div .news-icon {
+        display: block;
+        float: right;
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-right: 0;
+    }
+
+    div.responsive #navlist {
+        text-align: left;
+    }
+    div.responsive #navlist li {
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+    div.responsive #navlist li a.primary-navlink,
+    div.responsive #navlist li a.dropbtn {
+        display: block;
+        width: 100px;
+        border-radius: 0;
+    }
+    div.responsive #navlist ul.dropdown-content {
+        position: absolute;
+        left: 100px;
+        top: 0;
+        border-radius: 0;
+        padding: 6px;
+    }
+    div.responsive #navlist ul.dropdown-content li {
+        display: table-row;
+    }
+    div.responsive #navlist ul.dropdown-content li a {
+        /*display: inline;*/
+        padding: 0 5px 0 5px;
+    }
+
+    .main {
+        width: 100%;
+    }
+    aside.sidebar {
+        display: none;
+    }
+
+    aside.sidebar.responsive {
+        display: block;
+        float: right;
+        width: 50%;
+    }
+
+    .main .article1,
+    .main .article2 {
+        float: none;
+        width: 100%;
+    }
+
+    .main .article1:after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+
+}
+
+@media screen and (max-width: 435px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .main h2 {
+        font-size: 1.5em;
+    }
+
+    .main h3 {
+        font-size: 1.2 em;
+    }
 }
