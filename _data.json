@@ -8,10 +8,19 @@
   "ponies": {
     "pageTitle": "Swedish Gotlands"
   },
-  "retreat": {
-    "pageTitle": "Carriage House B&B"
-  },
   "contact": {
     "pageTitle": "Contact"
+  },
+  "kokovoko": {
+    "pageTitle": "Herman Melville"
+  },
+  "about-gotlands": {
+    "pageTitle": "Swedish Gotland Ponies"
+  },
+  "carriage-house-retreat-glimpse": {
+    "pageTitle": "Bed & Breakfast Overview"
+  },
+  "equipment": {
+    "pageTitle": "Equipment for Sale"
   }
 }

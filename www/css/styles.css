@@ -47,15 +47,11 @@ table {
 * Body and header
 *********************************************************/
 
-.clear:after {
-    content: " ";
-    display: table;
-    clear: both;
-}
-
 body {
+    max-width: 1400px;
+    margin: 0 auto;
     font-family: 'Sorts Mill Goudy', serif;
-    background-color: rgb(255,204,0);  /* swedish flag, yellow */
+    background-color: rgb(255,255,224);
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -83,13 +79,60 @@ header p {
     margin-bottom: 15px;
 }
 
+header a.title {
+    color: white;
+    position: relative;
+    text-decoration: none;
+}
+
+header a.title::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: 90%;
+    height: 2px;
+    bottom: 2px;
+    left: 5%;
+    background-color: rgb(255,204,0);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 400ms 200ms cubic-bezier(0.605, 0.115, 0.615, 2.1);
+}
+
+header a.title:hover { color: rgb(255,204,0); }
+
+header a.title:hover::after {
+    visibility: visible;
+    transform: scaleX(1.0);
+}
+
+header a.title::before {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    width: 90%;
+    height: 2px;
+    bottom: 2px;
+    left: 5%;
+    background-color: rgb(255,204,0);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 500ms linear;
+}
+
+header a.title:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
 
 /*********************************************************
-* Navigation
+* Navigation-Specific
 ***********************************************************/
-
-
-.navWrapper nav {
+nav {
+    background-color: rgb(255,204,0);
+    border-bottom: slategray solid 3px;
+    border-top: slategray solid 3px;
     padding: 0;
 }
 
@@ -105,11 +148,12 @@ nav li {
     list-style: none;
 }
 
-nav li.icon {
+div.icon {
     display: none;
 }
 
-nav a, .dropbtn, div .news-icon a {
+nav a, .dropbtn, div.news-icon a,
+div.icon a{
     display: inline-block;
     font-size: .85em;
     color: white;
@@ -148,6 +192,7 @@ nav .dropdown ul {
 .dropdown {
     position: relative;
     display: inline-block;
+    z-index: 10;
 }
 
 .dropdown li {
@@ -171,7 +216,8 @@ nav .dropdown ul {
 
 nav a:hover,
 .dropbtn:hover,
-div .news-icon a:hover,
+div.news-icon a:hover,
+div.icon a:hover,
 .dropbtn:focus {
     background-color: rgb(150,150,150);
 }
@@ -186,6 +232,24 @@ div .news-icon a:hover,
 * Primary Page Content:  Articles, Sidebar
 *********************************************************/
 
+/* this is the flex item under body:  males sticky footer */
+.wrapper {
+    flex: 1;
+}
+
+/* for some reason it does not work well to make .wrapper a parent of flex
+* items as well as a flex item itself,
+* so we have .content inside of .wrapper as flex parent for
+* naviagation, article(s), and sidebar */
+.content {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+}
+
+nav {
+    flex: 1 100%;
+}
 
 aside h2 {
     font-size: 1.5em;
@@ -200,81 +264,128 @@ aside p, aside li {
     margin-top: 10px;
 }
 
-.main h2 {
-    font-size: 2em;
-    margin-top: 20px;
+.ponies h1 {
+    font-size:  2.3em;
+    margin-top: 25px;
+    margin-bottom: 25px;
     text-align: center;
 }
-.main h3 {
+
+.main h2, .ponies h2 {
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.main h3, .ponies h3 {
     font-size: 1.5em;
     margin-top: 20px;
+    margin-bottom: 15px;
 }
-.main p {
+.main p, .ponies p {
     margin-bottom: 15px;
 }
 
 .main {
-    float: left;
-    width: 80%;
+    flex: 1 80%;
+    padding: 0 10px 0 20px;
+    order: 2;
 }
 
-.main .article1 {
-    float: left;
-    width: 50%;
+.main.article1 {
+    flex: 1 40%;
     padding: 0 10px 0 10px;
+    order: 2;
 }
 
-.main .article2 {
-    float: right;
-    width: 50%;
+.main.article2 {
+    flex: 1 40%;
+    order: 3;
     padding: 0 10px 0 20px;
 }
 
+.main .blog-text {
+    margin: 0 auto;
+    max-width: 750px;
+}
+
+.main h2.blog-title {
+    margin-bottom: 5px;
+}
+
+.blog-post p.blog-subtitle {
+    text-align: center;
+}
+
+.pony-content, .blog-content {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.pony-name, .pony-info {
+    flex: 1 100%;
+    margin: 20px auto 20px auto;
+    padding: 0 15px 0 15px;
+}
+
+.pony-text, .pony-visual {
+    flex: 1 50%;
+    min-width: 400px;
+    padding: 0 15px 0 15px;
+}
+
 .sidebar {
-    float: right;
-    width: 20%;
+    flex: 1 20%;
+    order: 1;
+    color: white;
     padding: 0 10px 15px 10px;
-    background-color: rgb(255,255,224);
+    background-color: rgb(0,127,229);
     border: black solid 2px;
     border-radius: 15px;
 }
 
-div .news-icon {
+.sidebar a {
+    color: rgb(200,200,224);
+    text-decoration: none;
+    transition: font-size 0.5s linear;
+}
+
+.sidebar a:hover {
+    color: rgb(255,204,0);
+    font-size: 1.05em;
+}
+
+div.news-icon {
     display: none;
 }
 
-nav ul, header h1, .pageWrapper {
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.pageWrapper {
-    flex: 1;
-}
-
-/* enable sticky footer:
-.subpageWrapper {
-    min-height: calc(100vh - 60px);
- }
-*/
-
-.main img {
+.main img, .ponies img {
+    display: block;
     width: 90%;
     border: black groove 5px;
     border-radius: 3px;
-    margin: 10px;
+    margin: 15px auto 15px auto;
 }
 
-.main img.left {
+.main img.left, .ponies img.left {
     float: left;
     width: 45%;
     margin-left: 0;
+    margin-right: 10px;
 }
 
-.main img.right {
+.main img.right, .ponies img.right {
     float: right;
     width: 45%;
     margin-right: 0;
+    margin-left: 10px;
+}
+
+/* styling for the invitation on the contact page */
+#contactInvite {
+    font-size:  1.5em;
+    font-weight: 200;
+    font-style: italic;
 }
 
 
@@ -292,6 +403,7 @@ footer {
     display: -webkit-flex;
     flex-flow: row wrap;
     -webkit-flex-flow: row wrap;
+    border-top: slategray solid 3px;
 }
 
 footer .element {
@@ -330,12 +442,16 @@ ul.social-icons {
 .fa-google-plus,
 .fa-instagram {
     padding:10px 14px;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
     transition: .5s;
     background-color: rgb(0,127,229);
+}
+
+.fa-facebook.nonfooter,
+.fa-twitter.nonfooter,
+.fa-google-plus.nonfooter,
+.fa-instagram.nonfooter {
+    background-color: rgb(255,255,224);
+    border-radius: 20%;
 }
 
 .fa-facebook:hover {
@@ -352,22 +468,161 @@ ul.social-icons {
     background-color: #bc2a8d;
 }
 
+
+/*******************************
+* Carousel
+* borrowed from:  https://github.com/codepo8/simple-carousel
+********************************/
+
+.carouselbox {
+    font-family: helvetica,sans-serif;
+    font-size: 14px;
+    width: 400px;
+    position: relative;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 10px #ccc;
+    overflow: hidden;
+}
+
+.carouselbox.center {
+    margin: 20px auto 20px auto;
+}
+
+.carouselbox.left {
+    float: left;
+    margin: 20px;
+}
+
+.carouselbox.right {
+    float: right;
+    margin: 20px;
+}
+
+.carouselcontent {
+    margin: 0;
+    padding: 0;
+}
+.carouselcontent li {
+    font-size: 100px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    text-align: center;
+    z-index: 2;
+}
+
+
+.active {
+    height: 420px;
+}
+.carouselbox button {
+    border: none;
+    visibility: hidden;
+}
+.active button {
+    visibility: visible;
+}
+.offscreen {
+    position: absolute;
+    left: -2000px;
+}
+
+.active .buttons {
+    padding: 5px 0;
+    background: #eee;
+    text-align: center;
+    z-index: 9;
+    position: relative;
+}
+.active li {
+    position: absolute;
+    top: 20px;
+    opacity: 0;
+    transform: scale(0);
+    transition: 1s;
+}
+.active li.current {
+    top: 20px;
+    opacity: 1;
+    transform: scale(1);
+    transition: 1s;
+}
+.carouselbox li img {
+    width: 380px;
+    height: 380px;
+    display: block;
+    border: black solid 2px;
+}
+
+/*******************************
+* Embedded Video
+********************************/
+
+div.pony-video {
+    position: relative;
+    width: 90%;
+    height: 0;
+    padding-bottom: 60%;
+    margin: 10px auto 10px auto;
+}
+
+div iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/***************************
+* Misc
+****************************/
+
+blockquote.kokovoko {
+    font-size: 1.5em;
+    padding-top: 2em;
+    font-weight: 200;
+    text-align: center;
+}
+
+p.melville {
+    text-align: center;
+}
+
 /***************************
 * Responsivity
 ****************************/
 
 @media screen and (max-width: 800px) {
-    #navlist li:not(:first-child) {
+
+    .content {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    nav {
         display: none;
     }
-    div.responsive #navlist {
-        padding: 0;
+
+    nav.responsive {
+        display: block;
+        flex: 1 100px;
+        visibility: collapse;
+        z-index: 10;
     }
-    #navlist .dropdown {
+
+    nav.responsive #navlist {
+        padding: 0;
+        visibility: visible;
+        order: 0;
+    }
+    nav.responsive #navlist .dropdown {
         display: block;
         position: relative;
+        z-index: 10;
     }
-    #navlist li.icon {
+    div.icon {
         display: block;
         float: left;
         position: absolute;
@@ -376,7 +631,7 @@ ul.social-icons {
         margin-left: 0;
     }
 
-    div .news-icon {
+    div.news-icon {
         display: block;
         float: right;
         position: absolute;
@@ -385,62 +640,88 @@ ul.social-icons {
         margin-right: 0;
     }
 
-    div.responsive #navlist {
+    nav.responsive #navlist {
         text-align: left;
     }
-    div.responsive #navlist li {
+    nav.responsive #navlist li {
         display: block;
         padding: 0;
         margin: 0;
     }
-    div.responsive #navlist li a.primary-navlink,
-    div.responsive #navlist li a.dropbtn {
+
+    nav.responsive #navlist li a.primary-navlink,
+    nav.responsive #navlist li a.dropbtn {
         display: block;
         width: 100px;
         border-radius: 0;
     }
-    div.responsive #navlist ul.dropdown-content {
+    nav.responsive #navlist ul.dropdown-content {
         position: absolute;
         left: 100px;
         top: 0;
         border-radius: 0;
         padding: 6px;
     }
-    div.responsive #navlist ul.dropdown-content li {
+    nav.responsive #navlist ul.dropdown-content li {
         display: table-row;
     }
-    div.responsive #navlist ul.dropdown-content li a {
+    nav.responsive #navlist ul.dropdown-content li a {
         /*display: inline;*/
         padding: 0 5px 0 5px;
     }
 
-    .main {
-        width: 100%;
-    }
     aside.sidebar {
-        display: none;
-        width: 0;
-        transition: width 0.4s ease-out;
+        flex: 1 200px;
+        visibility: collapse;
+        order: 4;
     }
 
     aside.sidebar.responsive {
-        display: block;
-        float: right;
-        width: 50%;
+        visibility: visible;
+        order: 0;
     }
 
-    .main .article1,
-    .main .article2 {
-        float: none;
-        width: 100%;
+    .main {
+        flex: 1 300px;
+        order: 2;
     }
 
-    .main .article1:after {
-        content: " ";
-        display: table;
-        clear: both;
+    .main.article1,
+    .main.article2 {
+        flex: 1 300px;
     }
 
+    .main.article1 {
+        order: 1;
+     }
+
+    .main.article2 {
+        order: 2;
+     }
+}
+
+@media screen and (max-width: 650px) {
+    .carouselbox {
+        width: 250px;
+    }
+
+    .carouselbox.left,
+    .carouselbox.right {
+        margin: 15px;
+    }
+
+    .carouselbox.center {
+        margin: 15px auto 15px auto;
+    }
+
+    .active {
+        height: 265px;
+    }
+
+    .carouselbox li img {
+        width: 230px;
+        height: 230px;
+    }
 }
 
 @media screen and (max-width: 435px) {

@@ -1,8 +1,19 @@
-<div class = "news-icon"><a href="javascript:void(0);" class = "fa fa-newspaper-o"> News</a></div>
+
 <aside class="sidebar">
+    <h2>Recent Posts</h2>
+    <ul>
+        <%  let count = 0;
+            for( var slug in public.blog.posts._data ) {
+                count++;
+                if ( count > postListLimit) { break };
+            %>
+        <li><a href="/blog/posts/<%= slug %>.html"><%= public.blog.posts._data[slug].pageTitle %></a></li>
+        <%
+            }; %>
+    </ul>
     <h2>In the News</h2>
     <ul>
-        <li>Upcoming Show</li>
+        <li><a href="#">Upcoming Show</a></li>
         <li>New Ponies</li>
         <li>Horse Park Festival</li>
     </ul>

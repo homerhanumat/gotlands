@@ -1,5 +1,6 @@
 {
   "globals": {
-    "siteTitle": "Kokovoko Farm"
+    "siteTitle": "Kokovoko Farm",
+    "postListLimit": 3
   }
 }

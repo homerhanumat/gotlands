@@ -1,0 +1,10 @@
+<article class="main">
+    <h2>Blog Posts</h2>
+    <ul>
+        <%  for( var slug in public.blog.posts._data ) {
+        %>
+        <li><a href="posts/<%= slug %>.html"><%= public.blog.posts._data[slug].pageTitle %></a></li>
+        <%
+            }; %>
+    </ul>
+</article>
