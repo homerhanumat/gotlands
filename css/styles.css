@@ -168,6 +168,11 @@ div.icon a{
     transition: all .5s;
 }
 
+nav a.active-link {
+    background-color: burlywood;
+    color: black;
+}
+
 nav .dropdown ul {
     text-align: left;
 }
