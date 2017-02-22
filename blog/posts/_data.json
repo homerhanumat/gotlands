@@ -3,24 +3,24 @@
     "pageTitle": "Pony Travel",
     "title": "Our Trip to Equine Affaire",
     "date" : "February 21, 2017",
-    "tags": ["gotlands", "shows"]
+    "tags": "gotlands,shows"
   },
   "adeline" : {
     "pageTitle": "Kokovoko Adeline",
     "title": "Remembering Kokovoko Adeline",
     "date" : "February 12, 2017",
-    "tags": ["gotlands"]
+    "tags": "gotlands"
   },
   "bb-stay-terry" : {
     "pageTitle": "Terry's Stay",
     "title": "Our Time at the Carriage House",
     "date" : "June 6, 2016",
-    "tags": ["carriage house", "farm stay"]
+    "tags": "carriage house,farm stay"
   },
   "gotland-history" : {
     "pageTitle": "Gotland History",
     "title": "A History of the Gotland",
     "date" : "July 10, 2015",
-    "tags": ["gotlands"]
+    "tags": "gotlands"
   }
 }

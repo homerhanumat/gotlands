@@ -4,6 +4,7 @@
  *
  *************************************************************/
 
+
 // Show dropdown when mouse enters button-like anchor
 // hide when mouse leaves dropdown area
 window.addEventListener('load', function() {
@@ -108,25 +109,77 @@ window.addEventListener('load', function() {
     const icon = document.querySelector('.icon');
     const navbar = document.querySelector('nav');
     const sidebar = document.querySelector('.sidebar');
-    const newsIcon = document.querySelector('.news-icon')
+    const newsIcon = document.querySelector('.news-icon');
     icon.addEventListener('click', function() {
         if ( navbar.classList.contains('responsive') ) {
             navbar.classList.remove('responsive');
         } else {
             navbar.classList.add('responsive');
-            sidebar.classList.remove('responsive');
+            if (sidebar) {
+                sidebar.classList.remove('responsive');
+            }
         }
         });
-
-    newsIcon.addEventListener('click', function(){
-        if ( sidebar.classList.contains('responsive') ) {
-            sidebar.classList.remove('responsive');
-        } else {
-           sidebar.classList.add('responsive');
-           navbar.classList.remove('responsive');
-        }
-    });
+    if (newsIcon) {
+        newsIcon.addEventListener('click', function () {
+            if (sidebar.classList.contains('responsive')) {
+                sidebar.classList.remove('responsive');
+            } else {
+                sidebar.classList.add('responsive');
+                navbar.classList.remove('responsive');
+            }
+        });
+    }
 });
+
+/***********************************************************
+ *
+ * Blog Taglist
+ * (borrowed from Marijn Havebeke:  http://marijnhaverbeke.nl/blog)
+ *
+ ***********************************************************/
+
+function getTags() {
+    const tags = document.location.hash.slice(1).split(",");
+    if (!tags[0].length) tags.pop();
+    /* the following converts %20 to space, in each tag */
+    return tags.map(decodeURI);
+}
+
+function filterList() {
+    const tags = getTags();
+    const posts = document.body.getElementsByClassName("post");
+    for (let i = 0; i < posts.length; ++i) {
+        let post = posts[i], visible = true;
+        let ptags = post.getAttribute("data-tags").split(",");
+        for (let j = 0; j < tags.length; ++j)
+            if (ptags.indexOf(tags[j]) == -1) {
+                visible = false;
+            }
+        post.style.display = visible ? "" : "none";
+    }
+    const tagElts = document.body.getElementsByClassName("tag");
+    for (let i = 0; i < tagElts.length; ++i) {
+        let elt = tagElts[i];
+        elt.className = "tag" + (tags.indexOf(elt.textContent) > -1 ? " selected" : "");
+    }
+}
+
+
+function filterTag(tag) {
+    const tags = getTags();
+    const known = tags.indexOf(tag);
+    if (known == -1) {
+        tags.push(tag);
+    }
+    else {
+        tags.splice(known, 1);
+    }
+    document.location.hash = tags.length ? "#" + tags.join(",") : "";
+}
+
+window.addEventListener('load', filterList);
+window.addEventListener('hashchange', filterList);
 
 
 /***********************************************************
@@ -134,20 +187,71 @@ window.addEventListener('load', function() {
  * Carousel (borrowed from https://github.com/codepo8/simple-carousel)
  *
  ***********************************************************/
-
-carousel = (function(){
+function carousel(){
 
     // Read necessary elements from the DOM once
-    var box = document.querySelector('.carouselbox');
-    var next = box.querySelector('.next');
-    var prev = box.querySelector('.prev');
+    const boxes = document.querySelectorAll('.carouselbox');
+    if ( boxes.length == 0 ) {
+        return;
+    }
+
+    boxes.forEach(function(box) {
+        const next = box.querySelector('.next');
+        const prev = box.querySelector('.prev');
+
+        // Define the global counter, the items and the
+        // current item
+        let counter = 0;
+        const items = box.querySelectorAll('.carouselcontent li');
+        const amount = items.length;
+        let current = items[0];
+
+        box.classList.add('active');
+
+        // navigate through the carousel
+
+        function navigate(direction) {
+
+            // hide the old current list item
+            current.classList.remove('current');
+
+            // calculate the new position
+            counter = (counter + direction) % amount;
+            counter = counter < 0 ? amount - 1 : counter;
+
+            // set new current element
+            // and add CSS class
+            current = items[counter];
+            current.classList.add('current');
+        }
+
+        // add event handlers to buttons
+        next.addEventListener('click', function(ev) {
+            navigate(1);
+        });
+        prev.addEventListener('click', function(ev) {
+            navigate(-1);
+        });
+
+        // show the first element
+        // (when direction is 0 counter doesn't change)
+        navigate(0);
+    });
+
+    /*
+    const box = document.querySelector('.carouselbox');
+    if (!box) {
+        return;
+    }
+    const next = box.querySelector('.next');
+    const prev = box.querySelector('.prev');
 
     // Define the global counter, the items and the
     // current item
-    var counter = 0;
-    var items = box.querySelectorAll('.carouselcontent li');
-    var amount = items.length;
-    var current = items[0];
+    let counter = 0;
+    const items = box.querySelectorAll('.carouselcontent li');
+    const amount = items.length;
+    let current = items[0];
 
     box.classList.add('active');
 
@@ -180,4 +284,8 @@ carousel = (function(){
     // (when direction is 0 counter doesn't change)
     navigate(0);
 
-})();
+    */
+
+}
+
+window.addEventListener('load', carousel);

@@ -22,5 +22,17 @@
   },
   "equipment": {
     "pageTitle": "Equipment for Sale"
+  },
+  "carriage-house-retreat-contract": {
+    "pageTitle": "Bed & Breakfast Particulars"
+  },
+  "carriage-house-retreat-activities": {
+    "pageTitle": "Bed & Breakfast Activities"
+  },
+  "handspinning-supplies": {
+    "pageTitle": "Handspinning Supplies"
+  },
+  "handspinning-related": {
+    "pageTitle": "Handspinning:  Events and Products"
   }
 }

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="Kokovo, a rare breeding farm for Swedish Gotland ponies.  Featuring bed and breakfast.  Located in Harrison County, Kentucky.">
     <meta name="author" content="Homer White">
-
+    <meta name="viewport" content="width=device-width">
     <link rel="icon" href="../images/favicon.jpg">
     <title>Blog | Kokovoko Farm</title>
     <link href="https://fonts.googleapis.com/css?family=Enriqueta|Sorts+Mill+Goudy" rel="stylesheet">
@@ -18,7 +18,7 @@
     <div class="icon"><a href="javascript:void(0);">&#9776; Toggle Nav</a></div>
     <h1><a class="title" href="kokovoko.html">Kokovoko</a></h1>
     <p>&hellip; a rare breeding farm</p>
-    <div class = "news-icon"><a href="javascript:void(0);" class = "fa fa-newspaper-o"> News</a></div>
+    
 </header>
 <div class="wrapper">
     <div class="blog-content">
@@ -26,7 +26,7 @@
     <ul id="navlist">
 
         <li><a class="primary-navlink " href="/index.html">Home</a></li>
-        <li><a class="primary-navlink " href="#">The Farm</a></li>
+        <li><a class="primary-navlink " href="/farm.html">The Farm</a></li>
         <li>
             <div class="dropdown">
                 <a class="dropbtn">Gotlands</a>
@@ -42,8 +42,8 @@
                 <a class="dropbtn">B&B</a>
                 <ul class="dropdown-content">
                     <li><a href="/carriage-house-retreat-glimpse.html">A Glimpse</a></li>
-                    <li><a href="#">Things to Do</a></li>
-                    <li><a href="#">Contract</a></li>
+                    <li><a href="/carriage-house-retreat-activities.html">Things to Do</a></li>
+                    <li><a href="/carriage-house-retreat-contract.html">Contract</a></li>
                 </ul>
             </div>
         </li>
@@ -51,8 +51,8 @@
             <div class="dropdown">
                 <a class="dropbtn">Handspinning</a>
                 <ul class="dropdown-content">
-                    <li><a href="#">Supplies</a></li>
-                    <li><a href="#">Related Products</a></li>
+                    <li><a href="/handspinning-supplies.html">Supplies</a></li>
+                    <li><a href="/handspinning-related.html">Related Products</a></li>
                 </ul>
             </div>
         </li>
@@ -62,41 +62,81 @@
         <li><a class="primary-navlink " href="/contact.html">Contact</a></li>
     </ul>
 </nav>
-        <article class="main">
-    <h2>Blog Posts</h2>
-    <ul>
+        <div class="blog-index-side">
+    <h2>Tags</h2>
+    <ul class="taglist">
+
         
-        <li><a href="posts/pony-travel.html">Pony Travel</a></li>
+
+        <li><span class="tag" onclick="filterTag(&quot;carriage house&quot;)">carriage house</span>(1)</li>
+
         
-        <li><a href="posts/adeline.html">Kokovoko Adeline</a></li>
+
+        <li><span class="tag" onclick="filterTag(&quot;farm stay&quot;)">farm stay</span>(1)</li>
+
         
-        <li><a href="posts/bb-stay-terry.html">Terry&#39;s Stay</a></li>
+
+        <li><span class="tag" onclick="filterTag(&quot;gotlands&quot;)">gotlands</span>(3)</li>
+
         
-        <li><a href="posts/gotland-history.html">Gotland History</a></li>
+
+        <li><span class="tag" onclick="filterTag(&quot;shows&quot;)">shows</span>(1)</li>
+
         
+
     </ul>
-</article>
+</div>
+
+<div class="blog-index-main">
+    <h2>Posts</h2>
+    <div class="postlist">
         
-<aside class="sidebar">
-    <h2>Recent Posts</h2>
-    <ul>
+        <div class="post" data-tags="gotlands,shows">
+            <h3><a href="posts/pony-travel.html">Our Trip to Equine Affaire</a></h3>
+            <div class="undertitle">
+                <span class="date">February 21, 2017</span>
+                
+                <span class="tag" onclick="filterTag(&quot;gotlands&quot;)">gotlands</span>
+                
+                <span class="tag" onclick="filterTag(&quot;shows&quot;)">shows</span>
+                
+            </div>
+        </div>
         
-        <li><a href="/blog/posts/pony-travel.html">Pony Travel</a></li>
+        <div class="post" data-tags="gotlands">
+            <h3><a href="posts/adeline.html">Remembering Kokovoko Adeline</a></h3>
+            <div class="undertitle">
+                <span class="date">February 12, 2017</span>
+                
+                <span class="tag" onclick="filterTag(&quot;gotlands&quot;)">gotlands</span>
+                
+            </div>
+        </div>
         
-        <li><a href="/blog/posts/adeline.html">Kokovoko Adeline</a></li>
+        <div class="post" data-tags="carriage house,farm stay">
+            <h3><a href="posts/bb-stay-terry.html">Our Time at the Carriage House</a></h3>
+            <div class="undertitle">
+                <span class="date">June 6, 2016</span>
+                
+                <span class="tag" onclick="filterTag(&quot;carriage house&quot;)">carriage house</span>
+                
+                <span class="tag" onclick="filterTag(&quot;farm stay&quot;)">farm stay</span>
+                
+            </div>
+        </div>
         
-        <li><a href="/blog/posts/bb-stay-terry.html">Terry&#39;s Stay</a></li>
+        <div class="post" data-tags="gotlands">
+            <h3><a href="posts/gotland-history.html">A History of the Gotland</a></h3>
+            <div class="undertitle">
+                <span class="date">July 10, 2015</span>
+                
+                <span class="tag" onclick="filterTag(&quot;gotlands&quot;)">gotlands</span>
+                
+            </div>
+        </div>
         
-    </ul>
-    <h2>In the News</h2>
-    <ul>
-        <li><a href="#">Upcoming Show</a></li>
-        <li>New Ponies</li>
-        <li>Horse Park Festival</li>
-    </ul>
-    <p>More information goes here.</p>
-    <p>And maybe another general remark.</p>
-</aside>
+    </div>
+</div>
     </div>
 </div>
 <footer>

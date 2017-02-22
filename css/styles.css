@@ -245,7 +245,7 @@ div.icon a:hover,
 /* for some reason it does not work well to make .wrapper a parent of flex
 * items as well as a flex item itself,
 * so we have .content inside of .wrapper as flex parent for
-* naviagation, article(s), and sidebar */
+* navigation, article(s), and sidebar */
 .content {
     display: flex;
     flex-flow: row wrap;
@@ -287,6 +287,13 @@ aside p, aside li {
     margin-top: 20px;
     margin-bottom: 15px;
 }
+
+.main h4, .ponies h4 {
+    font-size: 1.25em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
 .main p, .ponies p {
     margin-bottom: 15px;
 }
@@ -326,6 +333,75 @@ aside p, aside li {
     display: flex;
     flex-flow: row wrap;
 }
+
+.blog-index-side {
+    flex: 1 30%;
+}
+
+.blog-index-main {
+    flex: 1 70%;
+}
+
+.blog-index-main h2, .blog-index-side h2 {
+    font-size: 2.3em;
+    margin: 15px 10% 20px 10%;
+}
+
+.blog-index-main h3 {
+    font-size: 1.5em;
+    margin: 10px 0 5px 0;
+}
+
+.blog-index-main .postlist {
+    margin-left: 10px;
+}
+
+.blog-index-main .post a, .blog-index-side .post a {
+    color: #743511;
+    text-decoration: none;
+}
+.blog-index-main a:hover, .blog-index-side a:hover {
+    text-decoration: underline;
+}
+
+.blog-index-main .post {
+    margin: 15px 0;
+}
+
+.blog-index-main .date {
+    color: #606868;
+    font-size: 80%;
+}
+
+.tag {
+    cursor: pointer;
+    color: #326;
+    font-size: 80%;
+    background: #eef;
+    padding: 0 2px;
+    border-radius: 4px;
+}
+
+.tag:hover { background: #ddf; }
+
+.tag.selected {
+    background: #cff;
+    color: #166;
+}
+
+.tag.selected:hover { background: #aff; }
+
+.taglist, .taglist li {
+    margin: 0;
+    list-style: none;
+}
+
+.taglist li {
+    margin: 0;
+    padding: 0;
+}
+
+ul.taglist li:before { content: ""; }
 
 .pony-name, .pony-info {
     flex: 1 100%;
@@ -693,7 +769,8 @@ p.melville {
 
     .main.article1,
     .main.article2 {
-        flex: 1 300px;
+        flex: 1 50%;
+        min-width: 300px;
     }
 
     .main.article1 {
@@ -729,6 +806,15 @@ p.melville {
     }
 }
 
+@media screen and (max-width: 470px) {
+
+    .carouselbox.left,
+    .carouselbox.right {
+        float: none;
+        margin: 10px auto 10px auto;
+    }
+}
+
 @media screen and (max-width: 435px) {
     header h1 {
         font-size: 2.5em;
@@ -740,5 +826,11 @@ p.melville {
 
     .main h3 {
         font-size: 1.2em;
+    }
+
+    .carouselbox.left,
+    .carouselbox.right {
+        float: none;
+        margin: 10px auto 10px auto;
     }
 }

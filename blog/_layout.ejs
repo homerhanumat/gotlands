@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="Kokovo, a rare breeding farm for Swedish Gotland ponies.  Featuring bed and breakfast.  Located in Harrison County, Kentucky.">
     <meta name="author" content="Homer White">
-
+    <meta name="viewport" content="width=device-width">
     <link rel="icon" href="../images/favicon.jpg">
     <title><%- pageTitle %> | <%- siteTitle %></title>
     <link href="https://fonts.googleapis.com/css?family=Enriqueta|Sorts+Mill+Goudy" rel="stylesheet">
@@ -19,7 +19,6 @@
     <div class="blog-content">
         <%- partial("../partial/_navbar") %>
         <%- yield %>
-        <%- partial("../partial/_sidebar") %>
     </div>
 </div>
 <%- partial("../partial/_footer") %>
