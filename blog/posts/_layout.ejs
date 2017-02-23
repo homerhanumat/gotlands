@@ -18,7 +18,13 @@
 <div class="wrapper">
     <div class="blog-content">
         <%- partial("../../partial/_navbar") %>
-        <%- yield %>
+        <article class="main blog-post">
+            <h2 class="blog-title"><%- title %></h2>
+            <p class="blog-subtitle"><%- date %></p>
+            <div class="blog-text">
+                <%- yield %>
+            </div>
+        </article>
         <%- partial("../../partial/_sidebar") %>
     </div>
 </div>

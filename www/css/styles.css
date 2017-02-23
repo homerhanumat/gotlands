@@ -378,6 +378,10 @@ aside p, aside li {
     font-size: 80%;
 }
 
+.post-excerpt {
+    max-width: 700px;
+}
+
 .postlist.events .location {
     padding-left: 10px;
     font-size: 80%;
@@ -434,6 +438,13 @@ ul.taglist li:before { content: ""; }
     background-color: rgb(255,255,224);
     border: black solid 2px;
     border-radius: 15px;
+    /*display: flex;
+    flex-flow: column;
+    justify-content: flex-start; */
+}
+
+.sidebar > div {
+    flex: 1;
 }
 
 .sidebar a {
@@ -766,6 +777,12 @@ p.melville {
         /*visibility: collapse;
         flex: 1 200px; */
         order: 6;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    aside.sidebar > div {
+        flex: 1;
     }
 
     aside.sidebar.responsive {
@@ -783,7 +800,7 @@ p.melville {
     .main.article1,
     .main.article2 {
         flex: 1;
-        width: calc(100vw - 100px);
+        width: calc(50vw - 50px);
         min-width: 300px;
     }
 
@@ -794,6 +811,12 @@ p.melville {
     .main.article2 {
         order: 2;
      }
+
+    .pony-name, .pony-info {
+        flex: 1 calc(100vw - 120px);
+        margin: 20px auto 20px auto;
+        padding: 0 15px 0 15px;
+    }
 }
 
 @media screen and (max-width: 650px) {
