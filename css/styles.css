@@ -347,7 +347,7 @@ aside p, aside li {
     margin: 15px 10% 20px 10%;
 }
 
-.blog-index-main h3 {
+.blog-index-main h3, .postlist.events h3 {
     font-size: 1.5em;
     margin: 10px 0 5px 0;
 }
@@ -356,11 +356,15 @@ aside p, aside li {
     margin-left: 10px;
 }
 
-.blog-index-main .post a, .blog-index-side .post a {
+
+
+.blog-index-main .post a, .blog-index-side .post a,
+.postlist.events .post a {
     color: #743511;
     text-decoration: none;
 }
-.blog-index-main a:hover, .blog-index-side a:hover {
+.blog-index-main a:hover, .blog-index-side a:hover,
+.postlist.events .post a:hover {
     text-decoration: underline;
 }
 
@@ -368,9 +372,16 @@ aside p, aside li {
     margin: 15px 0;
 }
 
-.blog-index-main .date {
+.blog-index-main .date,
+.postlist.events .date {
     color: #606868;
     font-size: 80%;
+}
+
+.postlist.events .location {
+    padding-left: 10px;
+    font-size: 80%;
+    color: indigo;
 }
 
 .tag {

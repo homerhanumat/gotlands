@@ -5,9 +5,6 @@
   "farm": {
     "pageTitle": "The Farm"
   },
-  "ponies": {
-    "pageTitle": "Swedish Gotlands"
-  },
   "contact": {
     "pageTitle": "Contact"
   },
@@ -34,5 +31,8 @@
   },
   "handspinning-related": {
     "pageTitle": "Handspinning:  Events and Products"
+  },
+  "event-index": {
+    "pageTitle": "Events"
   }
 }

@@ -11,12 +11,40 @@
         <%
             }; %>
     </ul>
-    <h2>In the News</h2>
+
+    <%  const now = new Date();
+        let someEventInRange = false;
+            for( var slug in public.events._data ) {
+                let eventTime = new Date(public.events._data[slug].date);
+                let diff = (eventTime - now) / (1000 * 3600 * 24);
+                let inRange = diff >= 0 && diff <= 100;
+                if (inRange) {
+                    someEventInRange = true;
+                };
+            };
+        if ( someEventInRange ) {
+    %>
+    <h2>Upcoming Events</h2>
+    <%
+        };
+    %>
+
     <ul>
-        <li><a href="#">Upcoming Show</a></li>
-        <li>New Ponies</li>
-        <li>Horse Park Festival</li>
+        <%  for ( var slug in public.events._data ) {
+                let eventTime = new Date(public.events._data[slug].date);
+                let diff = (eventTime - now)/(1000*3600*24);
+                let inRange = diff >= 0 && diff <= 100;
+                if ( inRange ) {
+        %>
+        <li><a href="/events/<%= slug %>.html"><%= public.events._data[slug].name %></a>
+        <br><%= public.events._data[slug].date%></li>
+        <%
+                };
+            };
+        %>
     </ul>
+
+    <h2>Other News</h2>
     <p>More information goes here.</p>
-    <p>And maybe another general remark.</p>
+    <p>And maybe another remark.</p>
 </aside>

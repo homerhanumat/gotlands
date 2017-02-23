@@ -1,0 +1,20 @@
+{
+  "horse-festival-2017": {
+    "pageTitle": "Horse Festival 2017",
+    "name": "Festival of the Horse",
+    "date": "October 4, 2017",
+    "location": "Georgetown, KY"
+  },
+  "july-fourth-2017": {
+    "pageTitle": "July Fourth Parade",
+    "name": "Fourth of July Parade",
+    "date": "July 4, 2017",
+    "location":  "Georgetown, KY"
+  },
+  "driving-clinic-2017": {
+    "pageTitle": "Driving Clinic",
+    "name": "Kentucky Horse Park Driving Clinic",
+    "date": "March 11, 2017",
+    "location":  "Georgetown, KY"
+  }
+}

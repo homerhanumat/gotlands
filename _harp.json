@@ -1,6 +1,7 @@
 {
   "globals": {
     "siteTitle": "Kokovoko Farm",
-    "postListLimit": 3
+    "postListLimit": 3,
+    "upcomingEventsLimit": 100
   }
 }

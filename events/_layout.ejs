@@ -6,23 +6,23 @@
     <meta name="author" content="Homer White">
     <meta name="viewport" content="width=device-width">
     <link rel="icon" href="images/favicon.jpg">
-    <title><%- pageTitle %> | %><%- siteTitle %></title>
+    <title><%- pageTitle %> | <%- siteTitle %></title>
     <link href="https://fonts.googleapis.com/css?family=Enriqueta|Sorts+Mill+Goudy" rel="stylesheet">
     <script src="https://use.fontawesome.com/85f68023f3.js"></script>
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
 
 </head>
 
 <body>
-    <%- partial("partial/_header") %>
+    <%- partial("../partial/_header") %>
         <div class="wrapper">
             <div class="content">
-                <%- partial("partial/_navbar") %>
+                <%- partial("../partial/_navbar") %>
                 <%- yield %>
-                <%- partial("partial/_sidebar") %>
+                <%- partial("../partial/_sidebar") %>
             </div>
         </div>
-    <%- partial("partial/_footer") %>
+    <%- partial("../partial/_footer") %>
 </body>
-<script src="js/custom.js"></script>
+<script src="../js/custom.js"></script>
 </html>
