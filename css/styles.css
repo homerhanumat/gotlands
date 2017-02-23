@@ -429,21 +429,27 @@ ul.taglist li:before { content: ""; }
 .sidebar {
     flex: 1 20%;
     order: 1;
-    color: white;
+    color: black;
     padding: 0 10px 15px 10px;
-    background-color: rgb(0,127,229);
+    background-color: rgb(255,255,224);
     border: black solid 2px;
     border-radius: 15px;
+    display: flex;
+    flex-flow: column;
+}
+
+.sidebar > div {
+    flex: 1;
 }
 
 .sidebar a {
-    color: rgb(200,200,224);
+    color: blue;
     text-decoration: none;
     transition: font-size 0.5s linear;
 }
 
 .sidebar a:hover {
-    color: rgb(255,204,0);
+    color: sienna;
     font-size: 1.05em;
 }
 
@@ -691,11 +697,14 @@ p.melville {
 
     nav {
         display: none;
+        background-color: rgb(255,255,224);
+        border: none;
     }
 
     nav.responsive {
         display: block;
-        flex: 1 100px;
+        flex: 1;
+        max-width: 100px;
         visibility: visible;
         z-index: 10;
     }
@@ -759,24 +768,34 @@ p.melville {
     }
 
     aside.sidebar {
-        flex: 1 200px;
-        visibility: collapse;
-        order: 4;
+        flex: 1 100%;
+        /*visibility: collapse;
+        flex: 1 200px; */
+        order: 6;
+        display flex;
+        flex-flow: row wrap;
+    }
+
+    aside.sidebar > div {
+        flex: 1;
     }
 
     aside.sidebar.responsive {
-        visibility: visible;
+        /*visibility: visible;*/
         order: 0;
     }
 
     .main {
-        flex: 1 300px;
+        /*flex: 1 300px;*/
+        flex: 1;
+        width: calc(100vw - 100px);
         order: 2;
     }
 
     .main.article1,
     .main.article2 {
-        flex: 1 50%;
+        flex: 1;
+        width: calc(100vw - 100px);
         min-width: 300px;
     }
 
