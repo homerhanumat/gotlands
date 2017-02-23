@@ -2,38 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bfb289d-4bca-4309-a267-ec625579048f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/events/_data.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/events/_layout.ejs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/events/driving-clinic-2017.ejs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/events/horse-festival-2017.ejs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/events/july-fourth-2017.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_data.json" afterPath="$PROJECT_DIR$/_data.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_harp.json" afterPath="$PROJECT_DIR$/_harp.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layout.ejs" afterPath="$PROJECT_DIR$/_layout.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partial/_navbar.ejs" afterPath="$PROJECT_DIR$/partial/_navbar.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partial/_sidebar.ejs" afterPath="$PROJECT_DIR$/partial/_sidebar.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/.idea/workspace.xml" afterPath="$PROJECT_DIR$/www/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/about-gotlands.html" afterPath="$PROJECT_DIR$/www/about-gotlands.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/blog/index.html" afterPath="$PROJECT_DIR$/www/blog/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/blog/posts/adeline.html" afterPath="$PROJECT_DIR$/www/blog/posts/adeline.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/blog/posts/bb-stay-terry.html" afterPath="$PROJECT_DIR$/www/blog/posts/bb-stay-terry.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/blog/posts/gotland-history.html" afterPath="$PROJECT_DIR$/www/blog/posts/gotland-history.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/blog/posts/pony-travel.html" afterPath="$PROJECT_DIR$/www/blog/posts/pony-travel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/carriage-house-retreat-activities.html" afterPath="$PROJECT_DIR$/www/carriage-house-retreat-activities.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/carriage-house-retreat-contract.html" afterPath="$PROJECT_DIR$/www/carriage-house-retreat-contract.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/carriage-house-retreat-glimpse.html" afterPath="$PROJECT_DIR$/www/carriage-house-retreat-glimpse.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/contact.html" afterPath="$PROJECT_DIR$/www/contact.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/styles.css" afterPath="$PROJECT_DIR$/www/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/equipment.html" afterPath="$PROJECT_DIR$/www/equipment.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/farm.html" afterPath="$PROJECT_DIR$/www/farm.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/handspinning-related.html" afterPath="$PROJECT_DIR$/www/handspinning-related.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/handspinning-supplies.html" afterPath="$PROJECT_DIR$/www/handspinning-supplies.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/kokovoko.html" afterPath="$PROJECT_DIR$/www/kokovoko.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/ponies/purebred-sales.html" afterPath="$PROJECT_DIR$/www/ponies/purebred-sales.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/ponies/sport-sales.html" afterPath="$PROJECT_DIR$/www/ponies/sport-sales.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -51,51 +23,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_layout.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_layout.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blog/index.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="37" column="48" lean-forward="false" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_data.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/events/_data.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_sidebar.ejs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/partial/_sidebar.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="39" column="53" lean-forward="false" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="384" column="1" lean-forward="false" selection-start-line="384" selection-start-column="1" selection-end-line="384" selection-end-column="1" />
+            <state relative-caret-position="210">
+              <caret line="47" column="58" lean-forward="false" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -155,12 +87,12 @@
         <option value="$PROJECT_DIR$/events/_data.json" />
         <option value="$PROJECT_DIR$/events/_layout.ejs" />
         <option value="$PROJECT_DIR$/events.ejs" />
-        <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/_data.json" />
         <option value="$PROJECT_DIR$/_layout.ejs" />
         <option value="$PROJECT_DIR$/partial/_navbar.ejs" />
         <option value="$PROJECT_DIR$/_harp.json" />
         <option value="$PROJECT_DIR$/partial/_sidebar.ejs" />
+        <option value="$PROJECT_DIR$/css/styles.css" />
       </list>
     </option>
   </component>
@@ -384,12 +316,12 @@
       <workItem from="1487299293471" duration="7883000" />
       <workItem from="1487343406724" duration="14619000" />
       <workItem from="1487515940986" duration="6055000" />
-      <workItem from="1487626004842" duration="58640000" />
+      <workItem from="1487626004842" duration="61021000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158375000" />
+    <option name="totallyTimeSpent" value="160756000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -402,7 +334,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1440" height="773" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18240343" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -411,7 +343,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33619457" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33619457" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -787,14 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_layout.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_harp.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -811,18 +735,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="384" column="1" lean-forward="false" selection-start-line="384" selection-start-column="1" selection-end-line="384" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/partial/_navbar.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_layout.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -845,8 +769,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/partial/_sidebar.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
+        <state relative-caret-position="585">
           <caret line="39" column="53" lean-forward="false" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="47" column="58" lean-forward="false" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="58" />
           <folding />
         </state>
       </provider>

@@ -489,18 +489,14 @@ div.news-icon {
 footer {
     font-size: .9em;
     background-color: rgb(0,127,229);
-    color: rgb(204,204,204);
-    clear: both;
+    color: rgb(240,240,240);
     display: flex;
-    display: -webkit-flex;
     flex-flow: row wrap;
-    -webkit-flex-flow: row wrap;
     border-top: slategray solid 3px;
 }
 
 footer .element {
     flex: 1;
-    -webkit-flex: 1;
     min-width: 230px;
     height: 35px;
     line-height: 35px;
@@ -700,13 +696,13 @@ p.melville {
     nav.responsive {
         display: block;
         flex: 1 100px;
-        visibility: collapse;
+        visibility: visible;
         z-index: 10;
     }
 
     nav.responsive #navlist {
         padding: 0;
-        visibility: visible;
+        /*visibility: visible;*/
         order: 0;
     }
     nav.responsive #navlist .dropdown {
