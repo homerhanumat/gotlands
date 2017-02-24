@@ -43,5 +43,8 @@
   },
   "blog-index": {
     "pageTitle": "Blog"
+  },
+  "404": {
+    "pageTitle": "Page not Found"
   }
 }
