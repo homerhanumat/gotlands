@@ -491,6 +491,19 @@ div.news-icon {
     font-style: italic;
 }
 
+.post-excerpt a.blog-link {
+    text-decoration: none;
+    color: darkviolet;
+    font-weight: 300;
+    font-size: 1em;
+    transition: font-size 0.5s linear;
+}
+
+.post-excerpt a.blog-link:hover {
+    text-decoration: underline;
+    font-size: 1.05em;
+}
+
 
 
 /*******************************************************
