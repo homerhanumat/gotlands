@@ -1,7 +1,7 @@
 <nav>
     <ul id="navlist">
 
-        <li><a class="primary-navlink <%- current.source == 'index' && current.path.length == 1 ? 'active-link' : '' %>" href="/index.html">Home</a></li>
+        <li><a class="primary-navlink <%- current.source == 'index' ? 'active-link' : '' %>" href="/index.html">Home</a></li>
         <li><a class="primary-navlink <%- current.source == 'farm' ? 'active-link' : '' %>" href="/farm.html">The Farm</a></li>
         <li>
             <div class="dropdown">
@@ -33,8 +33,8 @@
             </div>
         </li>
         <li><a class="primary-navlink <%- current.source == 'equipment' ? 'active-link' : '' %>" href="/equipment.html">Equipment</a></li>
-        <li><a class="primary-navlink <%- current.source == 'events' ? 'active-link' : '' %>" href="/event-index.html">Events</a></li>
-        <li><a class="primary-navlink <%- (current.source == 'index' && current.path[0] == 'blog') ? 'active-link' : '' %>" href="/blog/index.html">Blog</a></li>
+        <li><a class="primary-navlink <%- current.source == 'event-index' ? 'active-link' : '' %>" href="/event-index.html">Events</a></li>
+        <li><a class="primary-navlink <%- current.source == 'blog-index' ? 'active-link' : '' %>" href="/blog-index.html">Blog</a></li>
         <li><a class="primary-navlink <%- current.source == 'contact' ? 'active-link' : '' %>" href="/contact.html">Contact</a></li>
     </ul>
 </nav>

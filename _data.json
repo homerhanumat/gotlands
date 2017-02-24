@@ -40,5 +40,8 @@
   },
   "pony-sport-sales": {
     "pageTitle": "Sport Pony List"
+  },
+  "blog-index": {
+    "pageTitle": "Blog"
   }
 }

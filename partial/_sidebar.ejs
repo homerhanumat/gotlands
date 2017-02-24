@@ -4,11 +4,11 @@
     <h2>Recent Posts</h2>
     <ul>
         <%  let count = 0;
-            for( var slug in public.blog.posts._data ) {
+            for( var slug in public.posts._data ) {
                 count++;
                 if ( count > postListLimit) { break };
             %>
-        <li><a href="/blog/posts/<%= slug %>.html"><%= public.blog.posts._data[slug].title %></a></li>
+        <li><a href="/posts/<%= slug %>.html"><%= public.posts._data[slug].title %></a></li>
         <%
             }; %>
     </ul>

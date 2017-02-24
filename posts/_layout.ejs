@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- partial("../partial/_head") %>
+
+<body>
+<%- partial("../partial/_header") %>
+<div class="wrapper">
+    <div class="blog-content">
+        <%- partial("../partial/_navbar") %>
+        <article class="main blog-post">
+            <h2 class="blog-title"><%- title %></h2>
+            <p class="blog-subtitle"><%- date %></p>
+            <div class="blog-text">
+                <%- yield %>
+            </div>
+        </article>
+        <%- partial("../partial/_sidebar") %>
+    </div>
+</div>
+<%- partial("../partial/_footer") %>
+</body>
+
+<%- partial("../partial/_scripts") %>
+
+</html>

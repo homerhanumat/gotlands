@@ -1,7 +1,7 @@
 <%
 var allTags = [];
-for (var slug in public.blog.posts._data) {
-    var postTags=public.blog.posts._data[slug].tags.split(',');
+for (var slug in public.posts._data) {
+    var postTags=public.posts._data[slug].tags.split(',');
     allTags = allTags.concat(postTags);
 }
 uniqueTags = allTags.filter(function(item, pos) {
@@ -38,12 +38,12 @@ for (var i = 0; i< allTags.length; i++) {
 <div class="blog-index-main">
     <h2>Posts</h2>
     <div class="postlist">
-        <% for (var slug in public.blog.posts._data){ %>
-        <div class="post", data-tags="<%= public.blog.posts._data[slug].tags %>">
-            <h3><a href="posts/<%= slug %>.html"><%= public.blog.posts._data[slug].title %></a></h3>
+        <% for (var slug in public.posts._data){ %>
+        <div class="post", data-tags="<%= public.posts._data[slug].tags %>">
+            <h3><a href="posts/<%= slug %>.html"><%= public.posts._data[slug].title %></a></h3>
             <div class="undertitle">
-                <span class="date"><%= public.blog.posts._data[slug].date %></span>
-                <% var tags = public.blog.posts._data[slug].tags.split(",");
+                <span class="date"><%= public.posts._data[slug].date %></span>
+                <% var tags = public.posts._data[slug].tags.split(",");
                 for (var i = 0; i < tags.length; i++) { %>
                 <span class = "tag" onclick='filterTag("<%= tags[i] %>")'><%= tags[i] %></span>
                 <% }; %>

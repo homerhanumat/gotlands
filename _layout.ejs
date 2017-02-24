@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <%- partial("partial/_head") %>
 
 <%
@@ -21,7 +22,7 @@
         <div class="<%- contentClass %>">
             <%- partial("partial/_navbar") %>
             <%- yield %>
-            <% if ( !onPonyPage ) { %>
+            <% if ( !onPonyPage  && !onBlogIndex ) { %>
                 <%- partial("partial/_sidebar") %>
             <% } %>
         </div>
