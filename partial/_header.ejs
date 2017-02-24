@@ -4,7 +4,8 @@
     <p>&hellip; a rare breeding farm</p>
     <%
         const onBlogIndex = current.path[0] == "blog" && current.source == "index";
-        const onPonyList = current.path[0] == "ponies";
+        //const onPonyList = current.path[0] == "ponies";
+        const onPonyList = current.source.includes("pony");
         const noNews = onBlogIndex || onPonyList;
         if ( !noNews ) {
     %>
