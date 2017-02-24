@@ -2,6 +2,7 @@
   "globals": {
     "siteTitle": "Kokovoko Farm",
     "postListLimit": 3,
-    "upcomingEventsLimit": 100
+    "upcomingEventsLimit": 100,
+    "emailContact": "kokovoko1@gmail.com"
   }
 }
