@@ -234,7 +234,8 @@ function carousel(){
         });
 
         // show the first element
-        // (when direction is 0 counter doesn't change)
+        // (when direction is 0 counter allegedly doesn't change,
+        // but navigate(0) moves past first lement on page load
         navigate(0);
     });
 
