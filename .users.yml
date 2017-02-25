@@ -1,0 +1,5 @@
+users:
+- id: 109dc21c-ad4a-4d20-89c5-64c72053b32a
+  name: homer
+  email: homerhanumat@gmail.com
+  hash: $2a$10$QeH6DmI4kABk.hjBKtoe2ODM2nW6vbKd2nMEJJONz/WuGY7aXMGpe
