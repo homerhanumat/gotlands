@@ -2,15 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e71a069-7ff6-436d-84cf-d90769b7e038" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/friggin-enormous-peacock.jpg" afterPath="$PROJECT_DIR$/images/friggin-enormous-peacock.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/girl-hugging-horse.jpg" afterPath="$PROJECT_DIR$/images/girl-hugging-horse.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/kokovoko-valentino.jpg" afterPath="$PROJECT_DIR$/images/kokovoko-valentino.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/lambs.jpg" afterPath="$PROJECT_DIR$/images/lambs.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/several-sheep.jpg" afterPath="$PROJECT_DIR$/images/several-sheep.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/toddler-with-pony.jpg" afterPath="$PROJECT_DIR$/images/toddler-with-pony.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/vegetables.jpg" afterPath="$PROJECT_DIR$/images/vegetables.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partial/_sidebar.ejs" afterPath="$PROJECT_DIR$/partial/_sidebar.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pony-purebred-sales.ejs" afterPath="$PROJECT_DIR$/pony-purebred-sales.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/.idea/workspace.xml" afterPath="$PROJECT_DIR$/www/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/404.html" afterPath="$PROJECT_DIR$/www/404.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/about-gotlands.html" afterPath="$PROJECT_DIR$/www/about-gotlands.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/carriage-house-retreat-activities.html" afterPath="$PROJECT_DIR$/www/carriage-house-retreat-activities.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/carriage-house-retreat-contract.html" afterPath="$PROJECT_DIR$/www/carriage-house-retreat-contract.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/carriage-house-retreat-glimpse.html" afterPath="$PROJECT_DIR$/www/carriage-house-retreat-glimpse.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/contact.html" afterPath="$PROJECT_DIR$/www/contact.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/equipment.html" afterPath="$PROJECT_DIR$/www/equipment.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/event-index.html" afterPath="$PROJECT_DIR$/www/event-index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/events/driving-clinic-2017.html" afterPath="$PROJECT_DIR$/www/events/driving-clinic-2017.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/events/horse-festival-2017.html" afterPath="$PROJECT_DIR$/www/events/horse-festival-2017.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/events/july-fourth-2017.html" afterPath="$PROJECT_DIR$/www/events/july-fourth-2017.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/farm.html" afterPath="$PROJECT_DIR$/www/farm.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/handspinning-related.html" afterPath="$PROJECT_DIR$/www/handspinning-related.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/handspinning-supplies.html" afterPath="$PROJECT_DIR$/www/handspinning-supplies.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/kokovoko.html" afterPath="$PROJECT_DIR$/www/kokovoko.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/posts/adeline.html" afterPath="$PROJECT_DIR$/www/posts/adeline.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/posts/bb-stay-terry.html" afterPath="$PROJECT_DIR$/www/posts/bb-stay-terry.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/posts/gotland-history.html" afterPath="$PROJECT_DIR$/www/posts/gotland-history.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/posts/pony-travel.html" afterPath="$PROJECT_DIR$/www/posts/pony-travel.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,7 +52,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pony-purebred-sales.ejs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pony-purebred-sales.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pony-purebred-sales.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
@@ -48,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_sidebar.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/partial/_sidebar.ejs">
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="56" column="20" lean-forward="false" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+            <state relative-caret-position="405">
+              <caret line="450" column="20" lean-forward="false" selection-start-line="450" selection-start-column="20" selection-end-line="450" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -66,8 +80,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/partial/_sidebar.ejs" />
         <option value="$PROJECT_DIR$/pony-purebred-sales.ejs" />
+        <option value="$PROJECT_DIR$/partial/_sidebar.ejs" />
+        <option value="$PROJECT_DIR$/css/styles.css" />
       </list>
     </option>
   </component>
@@ -123,6 +138,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gotlands" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gotlands" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -145,23 +174,23 @@
       <updated>1488032855373</updated>
       <workItem from="1488032856652" duration="186000" />
       <workItem from="1488033172491" duration="502000" />
-      <workItem from="1488044111356" duration="1313000" />
+      <workItem from="1488044111356" duration="2372000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2001000" />
+    <option name="totallyTimeSpent" value="3060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1440" height="773" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26037195" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32761088" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32761088" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -195,8 +224,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/partial/_sidebar.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="56" column="20" lean-forward="false" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+        <state relative-caret-position="510">
+          <caret line="55" column="42" lean-forward="false" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -205,6 +234,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="45" column="56" lean-forward="false" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="450" column="20" lean-forward="false" selection-start-line="450" selection-start-column="20" selection-end-line="450" selection-end-column="20" />
           <folding />
         </state>
       </provider>

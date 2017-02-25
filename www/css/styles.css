@@ -1,6 +1,3 @@
-/*  Note:  I started from "ending" CSS tutorial code of Chapter 13 of CSS:  The Missing Manual */
-
-
 /***************************************************************
 * code to reset browser styles
 * source: CSS:  The Missing Manual, 4th edition
@@ -445,6 +442,13 @@ ul.taglist li:before { content: ""; }
 
 .sidebar > div {
     flex: 1;
+    padding-left: 3px;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 .sidebar a {
