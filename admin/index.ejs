@@ -62,8 +62,8 @@ collections: # A list of collections the CMS should be able to edit
             <!--Content-->
             <article class="box post">
                 <header>
-                    <h2>{{ entry.title }}</h2>
-                    <p>{{ entry.date}}</p>
+                    <h2><%- public.posts._data.title %></h2>
+                    <p><%- public.posts._data.date %></p>
                 </header>
                 {{cms-preview field='body'}}
             </article>
@@ -71,18 +71,18 @@ collections: # A list of collections the CMS should be able to edit
     </div>
   </script>
 
-  <script type="text/x-handlebars" data-template-name='cms/preview/characters'>
+  <script type="text/x-handlebars" data-template-name='cms/preview/_data'>
     <div id="main-wrapper">
         <div class="container">
             {{#cms-preview field="list" as |character| }}
               <section class="box">
                   <span class="image featured">{{cms-preview field="image" from=character}}</span>
                   <header>
-                      <h3>{{_data.pageTitle}}</h3>
+                      <h3><%- public.posts._data.pageTitle %></h3>
                   </header>
-                  <p>{{_data.title}}</p>
-                  <p>{{_data.date}}</p>
-                  <p>{{_data.tags}}</p>
+                  <p><%- public.posts._data.title %></p>
+                  <p><%- public.posts._data.date %></p>
+                  <p><%- public.posts._data.tags %></p>
               </section>
             {{/cms-preview}}
         </div>
