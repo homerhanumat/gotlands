@@ -9,7 +9,7 @@ course offered through University College of the University of Denver.
 The source files for the site are contained in the `public` directory.
 
 I like to write my JavaScript in the ECMAScript 6, but there are plenty of 
-old browsers out there that need 5.1, so I my local site development is set up
+old browsers out there that need 5.1, so my local site development is set up
 to automatically "transpile" my Javascript 6 file (see `public/_dist/custom.js`)
 into the version 5.1 file (see `public/js/custom-5.js`) that is actually inserted
 into web pages.  For this I require the node program [Babel](https://babeljs.io/),
