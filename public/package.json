@@ -1,8 +1,0 @@
-{ "scripts": {
-    "bt" : "babel js/custom.js --out-file js/custom-5.js"
-  },
-  "dependencies": {
-    "babel-cli": "latest",
-    "babel-preset-es2015": "latest"
-  }
-}
