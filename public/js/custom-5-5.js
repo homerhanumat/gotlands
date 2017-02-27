@@ -6,10 +6,11 @@
  *
  *************************************************************/
 
-//hello
+//yo there
 
 // Show dropdown when mouse enters button-like anchor
 // hide when mouse leaves dropdown area
+
 window.addEventListener('load', function () {
 
     // keep track of mouse
