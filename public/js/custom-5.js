@@ -6,8 +6,6 @@
  *
  *************************************************************/
 
-//yo there
-
 // Show dropdown when mouse enters button-like anchor
 // hide when mouse leaves dropdown area
 window.addEventListener('load', function () {
@@ -36,12 +34,13 @@ window.addEventListener('load', function () {
     });
 
     var dropdowns = Array.from(document.querySelectorAll('.dropdown'));
+
     dropdowns.forEach(function (dropdown) {
 
         var dropdownAnchor = dropdown.querySelector('.dropbtn');
         var dropdownList = dropdown.querySelector('.dropdown-content');
 
-        // when mouse enter dropdown anchor, show the list, and
+        // when mouse enters dropdown anchor, show the list, and
         // make sure all other lists get hidden
         dropdownAnchor.addEventListener('mouseenter', function () {
             for (var i = 0; i < dropdowns.length; i++) {
@@ -54,28 +53,8 @@ window.addEventListener('load', function () {
             }
         });
 
-        // when mouse leaves anchor headed up or sideways, user probably
-        // does not want to see the list, so hide it after adecent interval
-        /*dropdownAnchor.addEventListener('mouseleave', function() {
-            window.setTimeout(function() {
-                const rect = dropdownAnchor.getBoundingClientRect();
-                if ( yPos < rect.bottom ) dropdownList.classList.remove('show');
-            }, 500);
-        }); */
-
-        // if mouse leaves list sideways or down, user probably does not
-        // need the list, so hide it after a decent interval
-        /* dropdownList.addEventListener('mouseleave', function() {
-            window.setTimeout(function() {
-                const rect = dropdownList.getBoundingClientRect();
-                if ( yPos > rect.top ) dropdownList.classList.remove('show');
-            }, 500);
-        }); */
-
         dropdown.addEventListener('mouseleave', function () {
-            window.setTimeout(function () {
-                dropdownList.classList.remove('show');
-            }, 500);
+            dropdownList.classList.remove('show');
         });
     });
 });
@@ -221,10 +200,10 @@ function carousel() {
         }
 
         // add event handlers to buttons
-        next.addEventListener('click', function (ev) {
+        next.addEventListener('click', function () {
             navigate(1);
         });
-        prev.addEventListener('click', function (ev) {
+        prev.addEventListener('click', function () {
             navigate(-1);
         });
 
@@ -233,44 +212,6 @@ function carousel() {
         // but navigate(0) moves past first lement on page load
         navigate(0);
     });
-
-    /*
-    const box = document.querySelector('.carouselbox');
-    if (!box) {
-        return;
-    }
-    const next = box.querySelector('.next');
-    const prev = box.querySelector('.prev');
-     // Define the global counter, the items and the
-    // current item
-    let counter = 0;
-    const items = box.querySelectorAll('.carouselcontent li');
-    const amount = items.length;
-    let current = items[0];
-     box.classList.add('active');
-     // navigate through the carousel
-     function navigate(direction) {
-         // hide the old current list item
-        current.classList.remove('current');
-         // calculate the new position
-        counter = (counter + direction) % amount;
-        counter = counter < 0 ? amount - 1 : counter;
-         // set new current element
-        // and add CSS class
-        current = items[counter];
-        current.classList.add('current');
-    }
-     // add event handlers to buttons
-    next.addEventListener('click', function(ev) {
-        navigate(1);
-    });
-    prev.addEventListener('click', function(ev) {
-        navigate(-1);
-    });
-     // show the first element
-    // (when direction is 0 counter doesn't change)
-    navigate(0);
-     */
 }
 
 window.addEventListener('load', carousel);

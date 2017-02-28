@@ -22,7 +22,7 @@ the source material by my static-site generator.
 ## Site-Generator
 
 To generate the site I'm using [Harp.js](https://harpjs.com/).  If from the root
-of the project i run the command
+of the project I run the command
 
 ```
 harp server public
@@ -30,7 +30,7 @@ harp server public
 
 then the site is available in my brower at the default URL `localhost:9000`.
 
-When I am happy with the changes I have made, then I generate a new version
+When I am happy with the my changes I generate a new version
 of the `www` folder with the command:
 
 ```
