@@ -699,7 +699,7 @@ ul.social-icons {
 
 /* the following prevents the last image from appearing/vanishing
 on page load */
-.active li:not(.first) {
+.active li:not(:first-child) {
     position: absolute;
     top: 20px;
     opacity: 0;
