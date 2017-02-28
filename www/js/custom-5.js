@@ -158,7 +158,7 @@ window.addEventListener('hashchange', filterList);
 
 /***********************************************************
  *
- * Carousel (borrowed from https://github.com/codepo8/simple-carousel)
+ * Carousel (modified from https://github.com/codepo8/simple-carousel)
  *
  ***********************************************************/
 function carousel() {
@@ -208,8 +208,6 @@ function carousel() {
         });
 
         // show the first element
-        // (when direction is 0 counter allegedly doesn't change,
-        // but navigate(0) moves past first lement on page load
         navigate(0);
     });
 }

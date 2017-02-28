@@ -50,8 +50,10 @@ body {
     font-family: 'Sorts Mill Goudy', serif;
     background-color: rgb(255,255,224);
     display: flex;
+    display: -webkit-flex;
     min-height: 100vh;
     flex-direction: column;
+    -webkit-flex-direction: column;
 }
 
 
@@ -96,8 +98,12 @@ header a.title::after {
     transition: all 400ms 200ms cubic-bezier(0.605, 0.115, 0.615, 2.1);
 }
 
-header a.title:hover { color: rgb(255,204,0); }
+header a.title:hover,
+header a.title:hover {
+    color: rgb(255,204,0);
+}
 
+header a.title:hover::after,
 header a.title:hover::after {
     visibility: visible;
     transform: scaleX(1.0);
@@ -117,6 +123,7 @@ header a.title::before {
     transition: all 500ms linear;
 }
 
+header a.title:hover::before,
 header a.title:hover::before {
     visibility: visible;
     transform: scaleX(1);
@@ -217,14 +224,18 @@ nav .dropdown ul {
 .show {display:block;}
 
 nav a:hover,
+nav a:focus,
 .dropbtn:hover,
 div.news-icon a:hover,
+div.news-icon a:focus,
 div.icon a:hover,
+div.icon a:focus,
 .dropbtn:focus {
     background-color: rgb(150,150,150);
 }
 
-.dropdown ul li a:hover {
+.dropdown ul li a:hover,
+.dropdown ul li a:focus {
     color: #00aced;
     font-size: 0.8em;
 }
@@ -237,6 +248,7 @@ div.icon a:hover,
 /* this is the flex item under body:  males sticky footer */
 .wrapper {
     flex: 1;
+    -webkit-flex: 1;
 }
 
 /* for some reason it does not work well to make .wrapper a parent of flex
@@ -245,12 +257,15 @@ div.icon a:hover,
 * navigation, article(s), and sidebar */
 .content {
     display: flex;
+    display: -webkit-flex;
     flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
     align-items: stretch;
 }
 
 nav {
     flex: 1 100%;
+    -webkit-flex: 1 100%;
 }
 
 aside h2 {
@@ -297,18 +312,21 @@ aside p, aside li {
 
 .main {
     flex: 1 80%;
+    -webkit-flex: 1 80%;
     padding: 0 10px 0 20px;
     order: 2;
 }
 
 .main.article1 {
     flex: 1 40%;
+    -webkit-flex: 1 40%;
     padding: 0 10px 0 10px;
     order: 2;
 }
 
 .main.article2 {
     flex: 1 40%;
+    -webkit-flex: 1 40%;
     order: 3;
     padding: 0 10px 0 20px;
 }
@@ -328,15 +346,19 @@ aside p, aside li {
 
 .pony-content, .blog-content {
     display: flex;
+    display: -webkit-flex;
     flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
 }
 
 .blog-index-side {
     flex: 1 30%;
+    -webkit-flex: 1 30%;
 }
 
 .blog-index-main {
     flex: 1 70%;
+    -webkit-flex: 1 70%;
 }
 
 .blog-index-main h2, .blog-index-side h2 {
@@ -361,7 +383,9 @@ aside p, aside li {
     text-decoration: none;
 }
 .blog-index-main a:hover, .blog-index-side a:hover,
-.postlist.events .post a:hover {
+.blog-index-main a:focus, .blog-index-side a:focus,
+.postlist.events .post a:hover,
+.postlist.events .post a:focus {
     text-decoration: underline;
 }
 
@@ -401,7 +425,10 @@ aside p, aside li {
     color: #166;
 }
 
-.tag.selected:hover { background: #aff; }
+.tag.selected:hover,
+.tag.selected:focus {
+    background: #aff;
+}
 
 .taglist, .taglist li {
     margin: 0;
@@ -417,31 +444,32 @@ ul.taglist li:before { content: ""; }
 
 .pony-name, .pony-info {
     flex: 1 100%;
+    -webkit-flex: 1 100%;
     margin: 20px auto 20px auto;
     padding: 0 15px 0 15px;
 }
 
 .pony-text, .pony-visual {
     flex: 1 50%;
+    -webkit-flex: 1 50%;
     min-width: 400px;
     padding: 0 15px 0 15px;
 }
 
 .sidebar {
     flex: 1 20%;
+    -webkit-flex: 1 20%;
     order: 1;
     color: black;
     padding: 0 10px 15px 10px;
     background-color: rgb(255,255,224);
     border: black solid 2px;
     border-radius: 15px;
-    /*display: flex;
-    flex-flow: column;
-    justify-content: flex-start; */
 }
 
 .sidebar > div {
     flex: 1;
+    -webkit-flex: 1;
     padding-left: 3px;
 }
 
@@ -457,7 +485,8 @@ ul.taglist li:before { content: ""; }
     transition: font-size 0.5s linear;
 }
 
-.sidebar a:hover {
+.sidebar a:hover,
+.sidebar a:focus {
     color: sienna;
     font-size: 1.05em;
 }
@@ -503,7 +532,8 @@ div.news-icon {
     transition: font-size 0.5s linear;
 }
 
-.post-excerpt a.blog-link:hover {
+.post-excerpt a.blog-link:hover,
+.post-excerpt a.blog-link:focus {
     text-decoration: underline;
     font-size: 1.05em;
 }
@@ -519,12 +549,15 @@ footer {
     background-color: rgb(0,127,229);
     color: rgb(240,240,240);
     display: flex;
+    display: -webkit-flex;
     flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
     border-top: slategray solid 3px;
 }
 
 footer .element {
     flex: 1;
+    -webkit-flex: 1;
     min-width: 230px;
     height: 35px;
     line-height: 35px;
@@ -570,17 +603,21 @@ ul.social-icons {
     border-radius: 20%;
 }
 
-.fa-facebook:hover {
+.fa-facebook:hover,
+.fa-facebook:focus {
     background-color: #3d5b99;
 }
-.fa-twitter:hover {
+.fa-twitter:hover,
+.fa-twitter:focus {
     background-color: #00aced;
 }
-.fa-google-plus:hover {
+.fa-google-plus:hover,
+.fa-google-plus:focus {
     background-color: #e25714;
 }
 
-.fa-instagram:hover {
+.fa-instagram:hover,
+.fa-instagram:focus {
     background-color: #bc2a8d;
 }
 
@@ -658,12 +695,24 @@ ul.social-icons {
     transform: scale(0);
     transition: 1s;
 }
-.active li.current {
+
+
+/* the following prevents the last image from appearing/vanishing
+on page load */
+.active li:not(.first) {
+    position: absolute;
     top: 20px;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0s;
+}
+
+.active li.current {
     opacity: 1;
     transform: scale(1);
     transition: 1s;
 }
+
 .carouselbox li img {
     width: 380px;
     height: 380px;
@@ -714,7 +763,9 @@ p.melville {
 
     .content {
         display: flex;
+        display: -webkit-flex;
         flex-flow: row wrap;
+        -webkit-flex-flow: row wrap;
     }
 
     nav {
@@ -726,6 +777,7 @@ p.melville {
     nav.responsive {
         display: block;
         flex: 1;
+        -webkit-flex: 1;
         max-width: 100px;
         visibility: visible;
         z-index: 10;
@@ -791,25 +843,26 @@ p.melville {
 
     aside.sidebar {
         flex: 1 100%;
-        /*visibility: collapse;
-        flex: 1 200px; */
+        -webkit-flex: 1 100%;
         order: 6;
         display: flex;
+        display: -webkit-flex;
         flex-flow: row wrap;
+        -webkit-flex-flow: row wrap;
     }
 
     aside.sidebar > div {
         flex: 1;
+        -webkit-flex: 1;
     }
 
     aside.sidebar.responsive {
-        /*visibility: visible;*/
         order: 0;
     }
 
     .main {
-        /*flex: 1 300px;*/
         flex: 1;
+        -webkit-flex: 1;
         width: calc(100vw - 100px);
         order: 2;
     }
@@ -817,6 +870,7 @@ p.melville {
     .main.article1,
     .main.article2 {
         flex: 1;
+        -webkit-flex: 1;
         width: calc(50vw - 50px);
         min-width: 300px;
     }
@@ -831,6 +885,7 @@ p.melville {
 
     .pony-name, .pony-info {
         flex: 1 calc(100vw - 120px);
+        -webkit-flex: 1 calc(100vw - 120px);
         margin: 20px auto 20px auto;
         padding: 0 15px 0 15px;
     }
