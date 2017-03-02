@@ -1,3 +1,11 @@
+<%
+let initialPath = "";
+let path = current.path;
+if ( path.includes("posts") || path.includes("events") ) {
+    initialPath = "../";
+}
+%>
+
 <footer>
     <span class="footer-text element">Copyright <%- new Date().getFullYear() %>, Kokovoko Farm.</span>
     <span class="footer-text element">Contact: <a href="mailto:<%- emailContact %>">Kokovoko Farm</a></span>

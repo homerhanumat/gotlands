@@ -1,1 +1,9 @@
-<script src="/js/custom-5.js"></script>
+<%
+let initialPath = "";
+let path = current.path;
+if ( path.includes("posts") || path.includes("events") ) {
+    initialPath = "../";
+}
+%>
+
+<script src="<%- initialPath %>js/custom-5.js"></script>

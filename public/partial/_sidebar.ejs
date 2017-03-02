@@ -1,3 +1,10 @@
+<%
+let initialPath = "";
+let path = current.path;
+if ( path.includes("posts") || path.includes("events") ) {
+    initialPath = "../";
+}
+%>
 
 <aside class="sidebar">
     <div>
@@ -8,7 +15,7 @@
                 count++;
                 if ( count > postListLimit) { break };
             %>
-        <li><a href="/posts/<%= slug %>.html"><%= public.posts._data[slug].title %></a></li>
+        <li><a href="<%- initialPath %>posts/<%= slug %>.html"><%= public.posts._data[slug].title %></a></li>
         <%
             }; %>
     </ul>
@@ -40,7 +47,7 @@
                 let inRange = diff >= 0 && diff <= 100;
                 if ( inRange ) {
         %>
-        <li><a href="/events/<%= slug %>.html"><%= public.events._data[slug].name %></a>
+        <li><a href="<%- initialPath %>events/<%= slug %>.html"><%= public.events._data[slug].name %></a>
         <br><%= public.events._data[slug].date%></li>
         <%
                 };
@@ -53,7 +60,7 @@
     <div>
     <h2>Other News</h2>
     <p>Check out
-        <a href="/pony-purebred-sales.html#newest-pony">Kokovoko X-Man</a>,
+        <a href="<%- initialPath %>pony-purebred-sales.html#newest-pony">Kokovoko X-Man</a>,
     our newest pony!</p>
     </div>
 

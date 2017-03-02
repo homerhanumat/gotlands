@@ -1,15 +1,23 @@
+<%
+let initialPath = "";
+let path = current.path;
+if ( path.includes("posts") || path.includes("events") ) {
+    initialPath = "../";
+}
+%>
+
 <nav>
     <ul id="navlist">
 
-        <li><a class="primary-navlink <%- current.source == 'index' ? 'active-link' : '' %>" href="/index.html">Home</a></li>
-        <li><a class="primary-navlink <%- current.source == 'farm' ? 'active-link' : '' %>" href="/farm.html">The Farm</a></li>
+        <li><a class="primary-navlink <%- current.source == 'index' ? 'active-link' : '' %>" href="<%- initialPath %>index.html">Home</a></li>
+        <li><a class="primary-navlink <%- current.source == 'farm' ? 'active-link' : '' %>" href="<%- initialPath %>farm.html">The Farm</a></li>
         <li>
             <div class="dropdown">
                 <a class="dropbtn">Gotlands</a>
                 <ul class="dropdown-content">
-                    <li><a href="/about-gotlands.html">About</a></li>
-                    <li><a href="/pony-purebred-sales.html">Purebred Sale List</a></li>
-                    <li><a href="/pony-sport-sales.html">Sport Pony List</a></li>
+                    <li><a href="<%- initialPath %>about-gotlands.html">About</a></li>
+                    <li><a href="<%- initialPath %>pony-purebred-sales.html">Purebred Sale List</a></li>
+                    <li><a href="<%- initialPath %>pony-sport-sales.html">Sport Pony List</a></li>
             </ul>
         </div>
         </li>
@@ -17,9 +25,9 @@
             <div class="dropdown">
                 <a class="dropbtn">B&B</a>
                 <ul class="dropdown-content">
-                    <li><a href="/carriage-house-retreat-glimpse.html">A Glimpse</a></li>
-                    <li><a href="/carriage-house-retreat-activities.html">Things to Do</a></li>
-                    <li><a href="/carriage-house-retreat-contract.html">Contract</a></li>
+                    <li><a href="<%- initialPath %>carriage-house-retreat-glimpse.html">A Glimpse</a></li>
+                    <li><a href="<%- initialPath %>carriage-house-retreat-activities.html">Things to Do</a></li>
+                    <li><a href="<%- initialPath %>carriage-house-retreat-contract.html">Contract</a></li>
                 </ul>
             </div>
         </li>
@@ -27,14 +35,14 @@
             <div class="dropdown">
                 <a class="dropbtn">Handspinning</a>
                 <ul class="dropdown-content">
-                    <li><a href="/handspinning-supplies.html">Supplies</a></li>
-                    <li><a href="/handspinning-related.html">Related Products</a></li>
+                    <li><a href="<%- initialPath %>handspinning-supplies.html">Supplies</a></li>
+                    <li><a href="<%- initialPath %>handspinning-related.html">Related Products</a></li>
                 </ul>
             </div>
         </li>
-        <li><a class="primary-navlink <%- current.source == 'equipment' ? 'active-link' : '' %>" href="/equipment.html">Equipment</a></li>
-        <li><a class="primary-navlink <%- current.source == 'event-index' ? 'active-link' : '' %>" href="/event-index.html">Events</a></li>
-        <li><a class="primary-navlink <%- current.source == 'blog-index' ? 'active-link' : '' %>" href="/blog-index.html">Blog</a></li>
-        <li><a class="primary-navlink <%- current.source == 'contact' ? 'active-link' : '' %>" href="/contact.html">Contact</a></li>
+        <li><a class="primary-navlink <%- current.source == 'equipment' ? 'active-link' : '' %>" href="<%- initialPath %>equipment.html">Equipment</a></li>
+        <li><a class="primary-navlink <%- current.source == 'event-index' ? 'active-link' : '' %>" href="<%- initialPath %>event-index.html">Events</a></li>
+        <li><a class="primary-navlink <%- current.source == 'blog-index' ? 'active-link' : '' %>" href="<%- initialPath %>blog-index.html">Blog</a></li>
+        <li><a class="primary-navlink <%- current.source == 'contact' ? 'active-link' : '' %>" href="<%- initialPath %>contact.html">Contact</a></li>
     </ul>
 </nav>

@@ -79,7 +79,7 @@ window.addEventListener('click', function(event) {
 
 /*************************************************************
  *
- * Toggle Navbar
+ * Toggle Navbar and Sidebar
  *
  ************************************************************/
 
@@ -112,7 +112,7 @@ window.addEventListener('load', function() {
 
 /***********************************************************
  *
- * Blog Taglist
+ * Use Tags to Filter Blog-Post List
  * (borrowed from Marijn Havebeke:  http://marijnhaverbeke.nl/blog)
  *
  ***********************************************************/
