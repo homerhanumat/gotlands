@@ -517,8 +517,8 @@ div.news-icon {
     margin-left: 10px;
 }
 
-/* styling for the invitation on the contact page */
-#contactInvite {
+/* styling for the invitation on the Contact page */
+#contact-invite {
     font-size:  1.5em;
     font-weight: 200;
     font-style: italic;
@@ -753,6 +753,11 @@ blockquote.kokovoko {
 
 p.melville {
     text-align: center;
+}
+
+img#image-404 {
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 /***************************
